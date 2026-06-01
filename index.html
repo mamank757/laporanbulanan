@@ -74,11 +74,6 @@
     text-align: center;
 }
 
-/* Sembunyikan koordinator secara default */
-#area-koordinator {
-    display: none; 
-}
-
   /* Container dibuat relative agar posisi absolute gambar mengacu ke sini */
 .sig-container { 
     display: inline-block; 
@@ -631,7 +626,7 @@ window.onload = () => {
     document.getElementById('out_lokasi_tgl2').innerText = `${b}, ${tglTeks}`;
 }
 async function generateAI() {
-    const gasWebAppUrl = "https://script.google.com/macros/s/AKfycbw8iDGS2I33sKQ90zaZR9BDDhptAtdPuwuQDTSKBwk9DT8utj75N0_uSP0zkeDli2M9/exec"; 
+    const gasWebAppUrl = "https://script.google.com/macros/s/AKfycbwpwvLPWN6tpt77MofEo6YTCxxhCYMZPyhNw-Y1h7i4jvhUgXiEc9bu_NMzjR2hn5G-/exec"; 
     
     const btn = document.getElementById('btn-ai');
     let sel = [];
@@ -744,7 +739,7 @@ FORMAT OUTPUT (WAJIB):
         const response = await fetch(gasWebAppUrl, {
     method: "POST",
     headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "text/plain;charset=utf-8"
     },
     body: JSON.stringify({
         prompt: promptText
